@@ -1,0 +1,97 @@
+% Build: latexmk -xelatex -outdir=build cv.tex   (from this folder)
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=18mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{XCharter}[
+  Extension      = .otf,
+  UprightFont    = *-Roman,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+  Numbers        = Lining]
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\definecolor{rule}{gray}{0.35}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{1.08}
+\AtBeginDocument{\raggedright}
+
+% Section headings: letter-spaced caps over a thin rule, as in the old CV
+\titleformat{\section}{\bfseries\small\addfontfeatures{LetterSpace=8}}{}{0pt}{\MakeUppercase}[{\color{rule}\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt,parsep=0pt,label=\textbullet}
+
+% \entry{Organisation}{Dates}{Role or detail line}
+\newcommand{\entry}[3]{%
+  \textbf{#1}\hfill #2\par
+  \ifx&#3&\else #3\par\fi}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{20}{24}\selectfont\bfseries Peter Mühlbacher}\par\vspace{4pt}
+  \href{mailto:muehlbacher.peter@gmail.com}{muehlbacher.peter@gmail.com}\enspace·\enspace
+  +44\,7830\,136588\enspace·\enspace
+  \href{https://peter.muehlbacher.me}{peter.muehlbacher.me}\par
+  \href{https://www.linkedin.com/in/peter-muehlbacher}{linkedin.com/in/peter-muehlbacher}\enspace·\enspace
+  \href{https://github.com/petermuehlbacher}{github.com/petermuehlbacher}
+\end{center}
+
+\vspace{2pt}
+I build and evaluate AI agents that forecast and do research. Before that, forecasting research at Metaculus and a PhD in probability theory.
+
+\section{Experience}
+
+\entry{FutureSearch}{Oct 2023 -- present}{VP of Research (since Oct 2026); Founding Research Scientist (2023--2026)}
+\begin{itemize}
+  \item Build LLM agents for forecasting and web research, and the statistics used to evaluate them.
+  \item Co-author of FutureSearch's public benchmarks for research and forecasting agents (below).
+\end{itemize}
+
+\vspace{4pt}
+\entry{Metaculus}{Sep 2022 -- Oct 2023}{Research Scientist}
+\begin{itemize}
+  \item Researched methods for aggregating probabilistic forecasts.
+  \item Built a ``trust score'' that predicts how reliable a crowd forecast is.
+\end{itemize}
+
+\section{Education}
+
+\entry{University of Warwick}{2022}{PhD Mathematics. Thesis: \emph{Probabilistic Methods for Quantum Spin Systems}}
+\vspace{3pt}
+\entry{University of Cambridge}{2017}{MASt Mathematics (Part III)}
+\vspace{3pt}
+\entry{University of Vienna}{2016}{BSc Mathematics}
+
+\section{Selected publications}
+
+\begin{itemize}[itemsep=3pt]
+  \item \emph{Bench to the Future: A Pastcasting Benchmark for Forecasting Agents.} FutureSearch, \href{https://arxiv.org/abs/2506.21558}{arXiv:2506.21558}, 2025.
+  \item \emph{Deep Research Bench: Evaluating AI Web Research Agents.} FutureSearch, \href{https://arxiv.org/abs/2506.06287}{arXiv:2506.06287}, 2025.
+  \item \emph{Contra Papers Claiming Superhuman AI Forecasting.} With N.~Bosse, L.~Phillips, D.~Schwarz. \href{https://www.lesswrong.com/posts/uGkRcHqatmPkvpGLq/contra-papers-claiming-superhuman-ai-forecasting}{LessWrong}, 2024.
+  \item \emph{Exploring Metaculus's AI Track Record.} With P.~Scoblic, Metaculus, 2023.
+  \item \emph{Dimerization in Quantum Spin Chains with O(n) Symmetry.} With J.\,E.~Björnberg, B.~Nachtergaele, D.~Ueltschi. Communications in Mathematical Physics 387, 2021.
+  \item Further papers in probability and mathematical physics in ALEA (2021) and Random Matrices: Theory and Applications (2019).
+\end{itemize}
+
+\section{Awards}
+
+\begin{itemize}
+  \item OeAD research scholarship (€2,200) and paid research internship at IST Austria (3\% acceptance rate), 2016--2018.
+  \item Dr.~Hans Riegel Award (€600, 2012), for a paper on elliptic curves in public-key cryptography.
+\end{itemize}
+
+\section{Other}
+
+\begin{itemize}
+  \item Languages: German (native), English (fluent); basic French, Russian, Chinese.
+  \item Former competitive gymnast.
+\end{itemize}
+
+\end{document}
