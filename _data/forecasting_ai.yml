@@ -1,0 +1,50 @@
+# Forecasting and AI writing listed on /research/, newest first.
+# `where` is the link text, e.g. arXiv or LessWrong. Leave out `authors` for solo work.
+
+- title: "Forecasting Accuracy Scales with Research"
+  year: 2026
+  where: FutureSearch
+  url: https://futuresearch.ai/findings-library/
+  summary: We mined 52,247 findings from 4,517 forecasting-agent rationales and gave growing slices of them back to two forecasting agents. Both improved, and neither curve flattened.
+
+- title: "The Best Forecasters Agree with Themselves"
+  authors: D. Schwarz
+  year: 2026
+  where: FutureSearch
+  url: https://futuresearch.ai/worldview-consistency/
+  summary: Worldview consistency ranks forecasting agents without a single resolved question. Repairing the inconsistencies it finds improved all nine agents we tested, four of them significantly.
+
+- title: "Iterating on a Forecaster without Waiting for the Future"
+  authors: D. Schwarz
+  year: 2026
+  where: FutureSearch
+  url: https://futuresearch.ai/iterating-on-a-forecaster/
+  summary: How we develop a forecasting agent on 1,907 already-resolved questions, why paired comparisons on a large sample matter, and what the agent harness contributes.
+
+- title: "Bench to the Future: A Pastcasting Benchmark for Forecasting Agents"
+  authors: the FutureSearch team
+  year: 2025
+  where: arXiv
+  url: https://arxiv.org/abs/2506.21558
+  summary: Hundreds of already-resolved forecasting questions, each with an offline corpus of tens of thousands of relevant web pages, so forecasting agents can be evaluated now instead of waiting for questions to resolve.
+
+- title: "Deep Research Bench: Evaluating AI Web Research Agents"
+  authors: the FutureSearch team
+  year: 2025
+  where: arXiv
+  url: https://arxiv.org/abs/2506.06287
+  summary: 89 multi-step web research tasks with human-worked answers, run against a frozen snapshot of the web so that models can be compared reliably over time.
+
+- title: "Contra Papers Claiming Superhuman AI Forecasting"
+  authors: N. Bosse, L. Phillips, and D. Schwarz
+  year: 2024
+  where: LessWrong
+  url: https://www.lesswrong.com/posts/uGkRcHqatmPkvpGLq/contra-papers-claiming-superhuman-ai-forecasting
+  summary: Why the 2024 papers presenting LLMs as rivalling or beating human forecasters don't support that claim, and what a fair comparison would need.
+
+- title: "Exploring Metaculus's AI Track Record"
+  authors: P. Scoblic and W. Aldred
+  year: 2023
+  where: EA Forum
+  url: https://forum.effectivealtruism.org/posts/e9htD7txe8RDdcehm/exploring-metaculus-s-ai-track-record
+  summary: How well Metaculus forecasters have predicted developments in AI.

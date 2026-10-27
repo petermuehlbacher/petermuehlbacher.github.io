@@ -6,7 +6,7 @@ about: "Identifying shortcomings of evolutions of forecasts and improving upon t
 * Prerequisites: [Martingales](https://en.wikipedia.org/wiki/Martingale_(probability_theory)), some definitions from [stochastic calculus](https://en.wikipedia.org/wiki/Stochastic_process#Definitions).
 * Related pages: 
   * [Colab notebook: This page with code](https://colab.research.google.com/drive/1z9khR2P2CY-B1OvlJC-tzqPvzxr4Bqt5?usp=sharing)
-  * [Colab notebook: Applying these methods to Metaculus data](https://colab.research.google.com/drive/1Axi7hf6fOJozq5VaMXFhHZz7TBN4O1dw?usp=sharing)
+  * [Colab notebook: Applying these methods to Metaculus data](https://colab.research.google.com/drive/1Axi7hf6fOJozq5VaMXFhHZz7TBN4O1dw?usp=sharing): the community prediction overreacts a little, while a forecast that gives more weight to better forecasters does better
   * [Google docs: Post-processing of Metaculus forecasts](https://docs.google.com/document/d/116Wstj8eP2Qv69fFta5axeRGJnxcm8w1Au4VJRG4huE) (more links in there)
 
 ------------

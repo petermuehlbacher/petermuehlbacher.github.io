@@ -5,12 +5,27 @@ permalink: /research/
 
 
 <h2>Research Interests</h2>
-<p>I'm interested in probability theory, statistical mechanics, and related algorithmic questions in theoretical computer science. Some specific topics I have worked on include: quantum spin systems; efficient sampling algorithms; couplings; cluster expansion methods.</p>
+<p>I work on AI agents that forecast and do research: building them, and measuring whether they are any good. Before that, I worked on probability theory and statistical mechanics, in particular quantum spin systems, sampling algorithms, couplings, and cluster expansion methods.</p>
+
+
+<section>
+<h2>Forecasting and AI</h2>
+<ul>
+{%- for item in site.data.forecasting_ai -%}
+<li>
+<strong>"{{ item.title }}"</strong>&nbsp;{%- if item.authors -%}with {{ item.authors | replace: ". ", ".&nbsp;" }},&nbsp;{%- endif -%}{{ item.year }}&nbsp;(<a href="{{ item.url }}">{{ item.where }}</a>)
+<ul>
+<li>{{ item.summary }}</li>
+</ul>
+</li>
+{%- endfor -%}
+</ul>
+</section>
 
 
 <section>
 {%- if site.papers.size > 0 -%}
-<h2>{{ page.list_title | default: "Publications and Preprints" }}</h2>
+<h2>{{ page.list_title | default: "Mathematics" }}</h2>
 <ul>
 {%- for paper in site.papers -%}
 <li>

@@ -4,12 +4,11 @@ bigheader: true
 
 <div class="home">
 <div markdown="1">
-  {%- if page.title -%}w
+  {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-I am a research scientist with interest in <em>probability theory</em>, its applications in <em>statistical mechanics</em> and <em>forecasting</em>, as well as <em>languages</em> and <em>programming</em>. My papers can be found [here](/research).
-
+I build and evaluate AI agents that forecast and do research at [FutureSearch](https://futuresearch.ai). Before that, I did forecasting research at [Metaculus](https://www.metaculus.com) and a PhD in probability theory.
 
 For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@muehlbacher.me).
 
