@@ -11,7 +11,7 @@
   --soft: #4f4f4a;
   --muted: #9a9a93;
   --rule: #e3e3dd;
-  --link: #1d4f9c;
+  --link: #2a7ae2; // the blue of the old minima-themed site
   --code-bg: #f2f2ed;
   --string: #6b4f1d;
   --measure: 40rem;
@@ -26,7 +26,7 @@
     --soft: #b9b7b0;
     --muted: #7d7b75;
     --rule: #2e2d2a;
-    --link: #93b4ec;
+    --link: #5c9cf0; // the same blue, lightened to read on the dark background
     --code-bg: #22211f;
     --string: #d6b98a;
   }
@@ -207,6 +207,23 @@ p, ul, ol, dl, blockquote, pre, table, figure { margin: 0 0 1.1em; }
 ul, ol { padding-left: 1.3em; }
 li { margin: .2em 0; }
 li > ul, li > ol { margin: .2em 0 .4em; }
+
+// Bullets as markdown asterisks, styled like the heading hashes. An inline-block pulled
+// into the indent (rather than ::marker, which Safari won't set in monospace) keeps the
+// asterisk on the text's baseline.
+ul { list-style: none; }
+
+ul > li::before {
+  content: "*";
+  display: inline-block;
+  width: 1.3em;
+  margin-left: -1.3em;
+  font-family: var(--mono);
+  font-size: .85em;
+  color: var(--muted);
+}
+
+.home .post-list > li::before { content: none; }
 
 a {
   color: var(--link);
