@@ -28,7 +28,7 @@ First notice that Cauchy-Schwarz can simply be interpreted as a fancy way of say
 \\[|\langle a,b\rangle|=|\cos(\theta)|\|a\|\|b\|\leq\|a\|\|b\|,\\]
 where \\(\theta=\angle(a,b)\\) is the angle between \\(a\\) and \\(b\\).
 
-#### On \\(\mathbb R^n,n\gg1\\), how far off is Cauchy–Schwarz "typically"?
+## On \\(\mathbb R^n,n\gg1\\), how far off is Cauchy–Schwarz "typically"?
 * The intuition is that in higher dimensions it becomes increasingly unlikely for two vectors to be approximately parallel (i.e. θ≈0 or θ≈π in which case Cauchy-Schwarz is sharp) since there are "too many directions". 
 * More rigorously, we may fix \\(a=(1,0,\dots,0)\\) and sample \\(b\\) from the Haar measure on the unit sphere. 
 * Note that for \\(n\gg1\\) we can do this by sampling \\(n\\) <abbr title="independent, identically distributed">iid</abbr> centered normal variables \\((x_i)_{i=1}^n\\) with variance \\(1\over n\\). 
@@ -36,7 +36,7 @@ where \\(\theta=\angle(a,b)\\) is the angle between \\(a\\) and \\(b\\).
 * Thus, we see that each (in particular the first) entry of \\(b\\) is of order \\(O(n^{-{1\over2}})\\) and thus 
 \\[\mathbb E|\langle a,b\rangle|=O(n^{-{1\over2}}).\\]
 
-#### How tight is \\(|\mathbb Ef|^2\leq\mathbb E[|f|^2]\\)
+## How tight is \\(|\mathbb Ef|^2\leq\mathbb E[|f|^2]\\)
 * First note that this inequality can be seen as another manifestation of Cauchy–Schwarz (although the observation that the variance cannot be negative is a quicker way to see it):
   * Every probability measure \\(\mathbb P\\) induces an inner product on the space of random variables with finite second moment by setting \\(\langle f,g\rangle:=\mathbb E f\bar g\\).
   * <span markdown="0">Now apply Cauchy–Schwarz to the constant one function and an arbitrary other function to get \[|\langle 1,f\rangle|^2 = \cos(\theta)\langle f,f\rangle\leq \mathbb E[|f|^2].\]</span>

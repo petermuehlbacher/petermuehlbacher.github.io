@@ -31,6 +31,10 @@ linkedin_username: peter-muehlbacher
 
 # Build settings
 theme: minima
+
+# The page title is the only h1, so "# Section" in a page's markdown becomes h2.
+kramdown:
+  header_offset: 1
 plugins:
   - jekyll-feed
   - jekyll-sitemap

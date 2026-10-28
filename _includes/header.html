@@ -1,10 +1,14 @@
 <header class="site-header" role="banner">
-  <div class="wrapper">
-    <h1>
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}" {%- unless page.bigheader -%} id="schmol"{%- endunless -%}>{{ site.title | escape }}</a>
-      <!--<a class="site-title" rel="author" href="{{ "/" | relative_url }}">Peter<br>Mühlbacher</a>-->
-    </h1>
-
-    {%- include nav.html -%}
-  </div>
+  <a class="site-name" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <nav class="site-nav">
+    <span class="nav-group">
+      <a href="{{ "/research/" | relative_url }}">research</a>
+      <a href="{{ "/CV.pdf" | relative_url }}">cv</a>
+    </span>
+    <span class="nav-group">
+      <a href="mailto:{{ site.email }}">email</a>
+      <a href="https://github.com/{{ site.github_username }}">github</a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">linkedin</a>
+    </span>
+  </nav>
 </header>

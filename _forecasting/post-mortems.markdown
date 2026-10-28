@@ -6,14 +6,14 @@ about: "Here I try to analyse where some of my worst forecasts went wrong."
 
 Please keep in mind that these examples are cherry-picked from my _worst_ predictions. (Worst in the sense that someone with access to the same information at the time could have pointed out my mistake.)
 
-## [Long COVID post hospitalisation](https://www.metaculus.com/questions/6589/long-covid-post-hospitalisation/)
+# [Long COVID post hospitalisation](https://www.metaculus.com/questions/6589/long-covid-post-hospitalisation/)
 
 ![](/assets/metaculus_longcovidposthospitalisation_pdf.png)
 
 One of my first predictions on Metaculus for which my reasoning can be found [here](https://www.metaculus.com/questions/6589/long-covid-post-hospitalisation/#comment-66160). At the time of writing this question hasn't resolved yet, so what went wrong? I came up with a simple model which deviated significantly from the community forecast and then shifted the pdf a bit to the left to account for the possibility of the community knowing something I didn't. Despite deviating from the community in what looks like the right direction, I completely failed to think about the tails of my distribution, however, which [could potentially prove fatal](https://www.metaculus.com/questions/6589/long-covid-post-hospitalisation/#comment-75918).
 This seems to be a case of being too invested in one particular model without accounting for the possibility of model failure. <!--([<q>[The] tails are often dominated by model failure</q>](https://www.lesswrong.com/posts/GMCs73dCPTL8dWYGq/use-normal-predictions?commentId=rSybMo3qeQDTddqET))-->
 
-## [Russian invasion of Ukraine before 2023](https://www.metaculus.com/questions/8898/russian-invasion-of-ukraine-before-2023/)
+# [Russian invasion of Ukraine before 2023](https://www.metaculus.com/questions/8898/russian-invasion-of-ukraine-before-2023/)
 
 ![](/assets/metaculus_ukraine_timeseries.png)
 
@@ -48,7 +48,7 @@ That being said, Robert de Neufville wrote [a much more in-depth post-mortem on 
 
 Scott Alexander wrote another excellent post-mortem [here on ACX](https://astralcodexten.substack.com/p/ukraine-warcasting), where he highlights how a lot of "pundits" seemed to happen to be on the right/wrong side of maybe mostly due to their political convictions and less so because of principled reasoning.-->
 
-## [When will the UK reach herd immunity >53.3m for Covid-19?](https://www.metaculus.com/questions/6105/uk-covid-herd-immunity-533m-date/)
+# [When will the UK reach herd immunity >53.3m for Covid-19?](https://www.metaculus.com/questions/6105/uk-covid-herd-immunity-533m-date/)
 
 A classic: I predicted on the title, while the resolution criteria actually state that <q>this question will resolve as the date when <strong>a credible media report stating that the >53.3m immunity threshold has been reached is published</strong>, rather than the date when this threshold is reached.</q>
 

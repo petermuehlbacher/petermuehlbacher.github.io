@@ -22,7 +22,7 @@ updated: 2022-02-14
     * This selects only 5 character strings that start and end with an `E`, do not have an `I` as their third letter, do not have any `P`s or `O`s, have between 1 and 3 `L`s and at least 1 `I`.
   * *For an exhaustive search, however, it turns out that we don't have to compute any of that.*-->
 
-#### Pool of potential solutions
+## Pool of potential solutions
 
 <!--* Once a word is not an admissible guess (after some other guesses), it will never be an admissible guess again.
 *--> Given a sequence of guesses, think of the "pool of admissible next guesses":
@@ -30,18 +30,18 @@ updated: 2022-02-14
   * This set can be partitioned into up to <span markdown="0">|{🟩,🟨,⬛}\(^5=3^5=243\)</span> equivalence classes. In particular there is a 1-to-1 correspondence between the marking of a guess and the equivalence class of the next guess.
   * So instead of computing the marking (by already assuming a solution), we may just fix the next guess; this also determines the marking.
 
-#### Greedy strategies need not be optimal
+## Greedy strategies need not be optimal
 
   * Intuitively, the best initial guess ought to keep as many words as possible on the table; i.e. given a solution, we might want to choose an initial guess A with 200 possibly correct second guesses (given the constraints after guessing A) over an initial guess with 100 possibly correct second guesses.
   * To see why this is not necessarily correct, imagine playing Eldrow in a different language "English++" that consists of all words `AAAAA`,`AAAAB`, ..., `AAAAZ`, and the words of the English language. Assume the solution is `AAAAZ`. Guessing `AAAAA` "only" leaves us with a pool of 25 possible correct guesses, while guessing any English word without `A`s, say `BIRCH`, leaves us with however many English words there are without any of the letters `B`,`I`,`R`,`C`, and `H` -- presumably significantly more than 25. But by design any of the made-up words except `AAAAZ` (the solution) would have lead to the longest possible sequence of admissible guesses, whereas having ruled out the letters `B`,`I`,`R`,`C`, and `H` almost certainly will leave us with a strictly shorter longest possible sequence of admissible guesses.
 <!-- Note that this also rules out _proving_ that we necessarily need to start with all grey fields. It does not mean, however, that this is a bad idea either; just that it depends on the language we are using. It does not seem obvious whether English (or rather the subset of English words accepted by Eldrow) is such a language.-->
 
-#### Exhaustive strategies are _slow_
+## Exhaustive strategies are _slow_
 
   * In the made-up language that consists of words of the form `AAAA?`, where `?` may be any letter from `A` to `Z`, any exhaustive strategy will have to loop through \\(26!\approx 4\times10^{26}\\) possibilities, whereas any human will immediately spot that any permutation of these "words" yields an admissible sequence of guesses attaining the maximal length. 
   * It seems hard to estimate this for the English language: From eyeballing [3Blue1Brown's video](https://www.youtube.com/watch?v=v68zYyaEmEA) it looks like "typically" a word reveals between 2-5 bits; this gives a (geometric) average of about 3 bits or, equivalently, the claim that "a typical word roughly cuts the pool into an \\(1\over8\\)th its size". But the total number of sequences can be written as a multiple of an expectation over a product of not really independent random variables, each \\(\geq 1\\), so this is only of limited use: One might expect such an expectation to be dominated by the tails of the individual random variables—this is somewhat similar to the ["ergodicity problem in betting/economics"](https://www.nature.com/articles/s41567-019-0732-0/figures/2).
 
-#### When _can_ we be greedy?
+## When _can_ we be greedy?
 
 …in order not to have to construct every possible sequence of guesses. More precisely, what are conditions on a guess \\(g\\), the pool of admissible subsequent guesses \\(P\\), and \\(a\in P\\) such that the set of sequences of guesses attaining maximum length (with the given constraints) contains a sequence that continues with \\(g,a,\dots\\)?
 
@@ -120,7 +120,7 @@ def satisfies(g0: str,g1: str,w: str) -> bool:
 print(depth(initial_guess,words))
 {% endhighlight %}
 
-## Attempt #1.1 (OCaml)
+# Attempt #1.1 (OCaml)
 My first dive into [OCaml](https://ocaml.org/learn/description.html), and proper functional programming in general, proved a mixed bag (although ultimately I rather enjoyed it): 
 * Compiled OCaml is _fast_ and doesn't crash like Python due to memory errors/max recursion limits.
 * The latter seems hard to get around since [tail recursions](https://stackoverflow.com/questions/33923/what-is-tail-recursion) are not supported in Python ([although some dirty workarounds exist](https://stackoverflow.com/a/13592002/1122856)), while OCaml encourages everyone to make recursions tail recursive by providing the tail recursive `List.fold` method. Presumably my implementation still doesn't make the most of this and various other features of OCaml—please drop me an email if you have ideas how to improve it!

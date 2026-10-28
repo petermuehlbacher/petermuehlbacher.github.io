@@ -1,5 +1,7 @@
 ---
 title: "Bounds on the norm of Wigner-type random matrices"
+venue: "Random Matrices: Theory and Applications"
+year: 2019
 DOI: https://doi.org/10.1142/S2010326319500096
 authors: "L. Erdős"
 arxiv: https://arxiv.org/abs/1802.05175

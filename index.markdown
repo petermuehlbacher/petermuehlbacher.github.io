@@ -8,13 +8,10 @@ bigheader: true
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+<h1 class="home-title">About</h1>
+
 I build and evaluate AI agents that forecast and do research at [FutureSearch](https://futuresearch.ai). Before that, I did forecasting research at [Metaculus](https://www.metaculus.com) and a PhD in probability theory.
 
-For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@muehlbacher.me).
-
-<div>
-    {%- include social.html -%}
-</div>
 </div>
 
   <!--{%- if site.posts.size > 0 -%}
@@ -57,12 +54,8 @@ For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <!--<span class="post-meta">{{ page.updated | date: date_format }}</span>-->
-      <h3>
-        <a class="post-link" href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </h3>
-        {{ page.about }}
+      <h3><a class="post-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h3>
+        <p>{{ page.about }}</p>
     </li>
     {%- endunless -%}
     {%- endfor -%}
@@ -80,12 +73,8 @@ For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <!--<span class="post-meta">{{ page.updated | date: date_format }}</span>-->
-      <h3>
-        <a class="post-link" href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </h3>
-        {{ page.about }}
+      <h3><a class="post-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h3>
+        <p>{{ page.about }}</p>
     </li>
     {%- endunless -%}
     {%- endfor -%}
@@ -104,12 +93,8 @@ For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <!--<span class="post-meta">{{ page.updated | date: date_format }}</span>-->
-      <h3>
-        <a class="post-link" href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </h3>
-        {{ page.about }}
+      <h3><a class="post-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h3>
+        <p>{{ page.about }}</p>
     </li>
     {%- endunless -%}
     {%- endfor -%}
@@ -128,12 +113,8 @@ For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <!--<span class="post-meta">{{ page.updated | date: date_format }}</span>-->
-      <h3>
-        <a class="post-link" href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </h3>
-        {{ page.about }}
+      <h3><a class="post-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h3>
+        <p>{{ page.about }}</p>
     </li>
     {%- endunless -%}
     {%- endfor -%}
